@@ -1,0 +1,121 @@
+<html>
+   <head>
+      <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+      <script>
+         function dis(val)
+         {
+             document.getElementById("result").value+=val
+         }
+         function solve()
+         {
+             let x = document.getElementById("result").value
+             let y = eval(x)
+             document.getElementById("result").value = y
+         }
+         function clr()
+         {
+             document.getElementById("result").value = ""
+         }
+         function back() 
+         {
+             var value = document.getElementById("result").value;
+            document.getElementById("result").value = value.substr(0, value.length - 1);
+         }
+         function opposite()
+         {
+            var value=document.getElementById("result");
+             document.getElementById("result").value = value.value * (-1)
+         }
+
+      </script>
+      <style>
+      body {
+         background: url(https://static4.depositphotos.com/1018174/428/i/600/depositphotos_4288199-stock-photo-modern-studio-background.jpg);
+         background-repeat: no-repeat;
+         background-position: center;
+         background-size: cover;
+
+      }
+      * {
+  box-sizing: border-box;
+}
+
+         .title{
+         margin-bottom: 10px;
+         text-align:center;
+         width: 600px;
+         height: 60px;
+         color:whitesmoke;
+         font-size: 50px;
+         font-weight: 900;
+         font-style: italic;
+         border: black 5px;
+         }
+  
+         input[type="button"]
+         {
+         background-color:black;
+         color: whitesmoke;
+         border: black 10px;
+         width: 140px;
+         height: 70px;
+         font-weight: 800;
+         font-size: 30px;
+         }
+  
+         input[type="text"]
+         {
+         background-color:blanchedalmond;
+         color: steelblue;
+         border: black 50px;
+         width:100%;
+         height: 70px;
+         font-size: 30px;
+         font-weight: 1000;
+         }
+      </style>
+   </head>
+   <body>
+      <center><br><br>
+      <div class = title >WoW Simple Calculator</div><br>
+       <table border="1">
+            <tr>
+            <td colspan="3"><input type="text" id="result"/></td>
+         </tr>
+         <tr>
+            <td><input type="button" value="+" onclick="dis('+')"/> </td>
+            <td><input type="button" value="-" onclick="dis('-')"/> </td>
+            <td><input type="button" value="*" onclick="dis('*')"/> </td>
+            <td><input type="button" value="/" onclick="dis('/')"/> </td>
+         </tr>
+         <tr>
+            <td><input type="button" value="7" onclick="dis('7')"/> </td>
+            <td><input type="button" value="8" onclick="dis('8')"/> </td>
+            <td><input type="button" value="9" onclick="dis('9')"/> </td>
+            <td><input type="button" value="%" onclick="dis('%')"/> </td>
+         </tr>
+         <tr>
+            <td><input type="button" value="4" onclick="dis('4')"/> </td>
+            <td><input type="button" value="5" onclick="dis('5')"/> </td>
+            <td><input type="button" value="6" onclick="dis('6')"/> </td>
+            <td><input type="button" value="C" onclick="back()"/> </td>
+         </tr>
+         <tr>
+            <td><input type="button" value="1" onclick="dis('1')"/> </td>
+            <td><input type="button" value="2" onclick="dis('2')"/> </td>
+            <td><input type="button" value="3" onclick="dis('3')"/> </td>
+            <td><input type="button" value="AC" onclick="clr()"/> </td>
+         </tr>
+         <tr>
+            <td><input type="button" value="." onclick="dis('.')"/> </td>
+            <td><input type="button" value="0" onclick="dis('0')"/> </td>
+            <td><input type="button" value="+/-" onclick="opposite()"/> </td>
+            <td><input type="button" value="=" onclick="solve()" /></td>
+         </tr>   
+      </table>
+   </center>
+   </body>
+</html>   
